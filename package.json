@@ -1,0 +1,29 @@
+{
+  "name": "fullstack_lab_p1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D4N13LCS/FullstackLab-P1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/D4N13LCS/FullstackLab-P1/issues"
+  },
+  "homepage": "https://github.com/D4N13LCS/FullstackLab-P1#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.4.1",
+    "mysql2": "^3.22.0",
+    "nodemon": "^3.1.14"
+  }
+}
