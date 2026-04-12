@@ -1,0 +1,50 @@
+services:
+  app: 
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - myNetwork
+    volumes:
+      - .:/app
+    depends_on:
+      - mongodb
+      - mysqldb
+    
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=mysqlDatabase
+    ports:
+      - "3309:3306"
+    networks:
+      - myNetwork
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:7
+    restart: always
+    environment:
+      - MONGO_INITDB_DATABASE=mongoDatabase
+    ports:
+      - "27017:27017"
+    networks:
+      - myNetwork
+    volumes:
+      - mongo_data:/data/db
+
+networks:
+  myNetwork:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  mongo_data:
+  
