@@ -18,7 +18,10 @@ A arquitetura segue um padrão organizado em camadas (Controller → Repository 
 ├── views/ (rotas)
 ├── config/
 ├── docker-compose.yml
-├── app.js
+├── main.js.
+├── server.js
+├── Dockerfile
+├── docker-compose.yaml
 ```
 
 ---
